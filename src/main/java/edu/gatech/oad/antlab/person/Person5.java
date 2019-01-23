@@ -31,9 +31,25 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  //Person 5 put your implementation here
-	  return null;
+		StringBuilder modified = new StringBuilder();
+		if (input.length() > 2) {
+			for (int i = 2; i < input.length(); i++) {
+				modified.append(input.charAt(i));
+			}
+			modified.append(1);
+			modified.append(0);
+			return modified.toString();
+		} else if (input.length() == 1) {
+			modified.append(1);
+			modified.append(0);
+			return modified.toString();
+		}
+
+		//Person 5 put your implementation here
+		return modified.toString();
+
 	}
-	
+
 	/**
 	 * Return a string rep of this object
 	 * that varies with an input string
