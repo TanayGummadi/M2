@@ -31,3 +31,8 @@ jar {
             'Class-Path': configurations.compile.collect{it.toURI().toString()}.join(' '))
     }
 }
+
+task run(type:JavaExec) {
+	main = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+	classpath = sourceSets.main.runtimeClasspath
+}
